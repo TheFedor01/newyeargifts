@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Открытие подарков</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Gacha System</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Открытие подарков</h1>
-        <button id="authButton">Авторизоваться через Discord</button>
-        <button id="openGiftButton" disabled>Открыть подарок</button>
-        <p id="message"></p>
+    <div id="menu">
+        <audio id="menuMusic" src="menu.mp3" autoplay loop></audio>
+        <h1>Welcome to Gacha Game!</h1>
+        <button id="startGacha">Start Gacha</button>
     </div>
+
+    <div id="gachaScreen" class="hidden">
+        <audio id="gachaMusic"></audio>
+        <div id="animationScreen"></div>
+        <div id="resultScreen" class="hidden">
+            <img id="itemImage" src="" alt="Gacha Item">
+            <button id="backButton">Back to Menu</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
