@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gacha System</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gacha Game</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="menu">
-        <audio id="menuMusic" src="menu.mp3" autoplay loop></audio>
-        <h1>Welcome to Gacha Game!</h1>
-        <button id="startGacha">Start Gacha</button>
-    </div>
+  <div id="menu">
+    <h1>🔥 Gacha Menu 🔥</h1>
+    <button id="roll-btn">Крутить Гачу</button>
+    <audio id="menu-music" loop>
+      <source src="assets/menu.mp3" type="audio/mpeg">
+    </audio>
+  </div>
 
-    <div id="gachaScreen" class="hidden">
-        <audio id="gachaMusic"></audio>
-        <div id="animationScreen"></div>
-        <div id="resultScreen" class="hidden">
-            <img id="itemImage" src="" alt="Gacha Item">
-            <button id="backButton">Back to Menu</button>
-        </div>
+  <div id="gacha-animation" class="hidden">
+    <div class="screen"></div>
+    <div class="screen"></div>
+    <div class="screen"></div>
+    <div class="item-display hidden">
+      <img id="item-image" src="" alt="Item">
+      <button id="back-btn">Назад</button>
     </div>
+    <audio id="gacha-music">
+      <source src="" type="audio/mpeg">
+    </audio>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
